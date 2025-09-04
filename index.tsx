@@ -116,7 +116,7 @@ export default definePlugin({
         {
             find: "\"--:--\"",
             replacement: {
-                match: /(ref:(\i),className.*?)\(0,.{0,50}playbackRateContainer.*?\}\)\}\)/,
+                match: /(playbackCacheKey:\i\}=\i,(\i).*?)\(0,.{0,50}playbackRateContainer.*?\}\)\}\)/,
                 replace: "$1$self.renderPlaybackSpeedComponent({mediaRef:$2})"
             }
         },
